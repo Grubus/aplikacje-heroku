@@ -5,7 +5,7 @@ const hbs = require('express-handlebars');
 const path = require("path")
 
 app.use(express.static('static'))
-app.set('views', path.join(__dirname, 'layout\\views'));
+app.set('views', path.join(__dirname, 'layout/views'));
 app.engine('hbs', hbs.engine({ defaultLayout: 'template.hbs' }));
 app.set('view engine', 'hbs');
 app.use(express.urlencoded({
