@@ -1,0 +1,29 @@
+<div class="menu">
+    <a class="menu_item" href="/">Main Page</a>
+    <a class="menu_item" href="/register">Register</a>
+    <a class="menu_item" href="/login">Login</a>
+    <a class="menu_item" href="/admin">Admin</a>
+    <a class="menu_item" href="/logout">Logout</a>
+</div>
+<div class="menu_secondary">
+    <a class="menu_secondary_item" href="/show">Show</a>
+    <a class="menu_secondary_item" href="/gender">Gender</a>
+    <a class="menu_secondary_item" href="/sort">Sort</a>
+</div>
+<div class="content">
+    <div class="list">
+        {{#each list}}
+        <div class="list_item">ID: {{this.id}}</div>
+        <div class="list_item">User: {{this.login}} - {{this.password}}</div>
+        <div class="list_item">Uczeń: 
+            {{#if this.student}}
+            <input type="checkbox" disabled checked>
+            {{else}}
+            <input type="checkbox" disabled>
+            {{/if}}
+        </div>
+        <div class="list_item">Wiek: {{this.age}}</div>
+        <div class="list_item">Płeć: {{this.gender}}</div>
+        {{/each}}
+    </div>   
+</div>

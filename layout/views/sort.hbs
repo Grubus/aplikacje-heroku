@@ -1,0 +1,63 @@
+<div class="menu">
+    <a class="menu_item" href="/">Main Page</a>
+    <a class="menu_item" href="/register">Register</a>
+    <a class="menu_item" href="/login">Login</a>
+    <a class="menu_item" href="/admin">Admin</a>
+    <a class="menu_item" href="/logout">Logout</a>
+</div>
+<div class="menu_secondary">
+    <a class="menu_secondary_item" href="/show">Show</a>
+    <a class="menu_secondary_item" href="/gender">Gender</a>
+    <a class="menu_secondary_item" href="/sort">Sort</a>
+</div>
+<div class="content">
+    
+    <form class="sort_form" onchange="this.submit()" action="/sort" method="get">
+        {{#if list.sort}}
+            <label>
+                <span>
+                    rosnąco
+                </span>
+                <input type="radio" name="sort" value="true" checked>
+            </label>
+            
+            <label>
+                <span>
+                    malejąco
+                </span>
+                <input type="radio" name="sort" value="false">
+            </label>
+            
+        {{else}}
+            <label>
+                <span>
+                    rosnąco
+                </span>
+                <input type="radio" name="sort" value="true">
+            </label>
+            
+            <label>
+                <span>
+                    malejąco
+                </span>
+                <input type="radio" name="sort" value="false"  checked>
+            </label>
+        {{/if}}
+    </form>
+    
+    <div class="list">
+        {{#each list.users}}
+        <div class="list_item">{{this.id}}</div>
+        <div class="list_item">{{this.login}} - {{this.password}}</div>
+        <div class="list_item">
+            {{#if this.student}}
+            <input type="checkbox" disabled checked>
+            {{else}}
+            <input type="checkbox" disabled>
+            {{/if}}
+        </div>
+        <div class="list_item">{{this.age}}</div>
+        <div class="list_item">{{this.gender}}</div>
+        {{/each}}
+    </div>   
+</div>

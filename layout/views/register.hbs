@@ -1,1 +1,18 @@
-XDDDDDDDDDD
+<div class="header">Register Page</div>
+<div class="content">
+    <form action="/register" method="post">
+        <label>Login:<input type="text" required name="login"/></label>
+        <label>Password:<input type="password" required name="password"/></label>
+        <label>Wiek:<input type="number" required name="age"/></label>
+        <label>Uczeń:<input type="checkbox" name="student" value="true"/></label>
+        <label>Płeć:
+            <div>
+                <input type="radio" required name="gender" value="W"/>
+                <label>W</label>
+                <input type="radio" required name="gender" value="M"/>
+                <label>M</label>
+            </div>
+        </label>
+        <input type="submit" value="Zaloguj"/>
+    </form>
+</div>

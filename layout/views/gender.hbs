@@ -10,4 +10,13 @@
     <a class="menu_secondary_item" href="/gender">Gender</a>
     <a class="menu_secondary_item" href="/sort">Sort</a>
 </div>
-<div class="header">Admin Page</div>
+<div class="content">
+    {{#each list}}
+    <div class="list list_gender">
+        {{#each this}}
+        <div class="list_item">ID: {{this.id}}</div>
+        <div class="list_item">Płeć: {{this.gender}}</div>
+        {{/each}}
+    </div>
+    {{/each}}    
+</div>

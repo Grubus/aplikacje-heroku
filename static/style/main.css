@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}
+
+.menu {
+    width: 100vw;
+    background: blue;
+    color: white;
+    height: 80px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around
+}
+
+a {
+    color: white;
+}
+
+.header {
+    color: grey;
+    width: 80vw;
+    margin: auto;
+    font-size: 100px;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.content {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+}
+
+.content form>label {
+    display: grid;
+    grid-template-columns: 200px 450px;
+    justify-content: center
+}
+
+.content form input[type=submit] {
+    width: 40%;
+}
+
+.content form input[type=checkbox] {
+    width: 10%;
+    height: 90%;
+}
+
+.content form input[type=radio] {
+    width: 10%;
+    height: 40%;
+}
+
+.content-login form {
+    height: 230px !important;
+}
+
+.menu_secondary {
+    width: 100vw;
+    background: yellow;
+    color: white;
+    height: 80px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around
+}
+
+.menu_secondary a {
+    color: black
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 150px 700px 200px 200px 200px;
+}
+
+.content .list .list_item {
+    border: solid 2px black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.content .list_item input[type=checkbox] {
+    width: 20%;
+    height: 60%;
+}
+
+.content .list_gender {
+    grid-template-columns: 150px 200px;
+}
+
+.sort_form {
+    flex-direction: row !important;
+    height: 100px !important
+}
+
+.sort_form label {
+    grid-template-columns: 180px 50px !important;
+}
+
+.sort_form label span {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.sort_form label input {
+    width: 80% !important;
+    height: 100% !important;
+}
